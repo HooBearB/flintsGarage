@@ -1,0 +1,11 @@
+@font-face {
+    font-family: FlintScript;
+    src: url('fonts/FlintScript/FlintScript.woff') format('woff');
+    src: url('fonts/FlintScript/FlintScript.woff2') format('woff2');
+    src: url('fonts/FlintScript/FlintScript.ttf') format('truetype');
+}
+
+body {
+    font-family: 'FlintScript';
+    image-rendering: pixelated;
+}
