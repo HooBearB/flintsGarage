@@ -17,6 +17,14 @@ def initFile():
 def runFile(content, directory = os.path.dirname(__file__)):
     content.append("    <h1>Index of flintsgarage.neocities.com" + directory[15:] + "/</h1>\n")
     content.append("    <hr>\n")
+    if directory != os.path.dirname(__file__):
+        parent = os.path.abspath(os.path.join(directory, os.pardir))
+        if parent == os.path.dirname(__file__):
+            parent = parent[16:] + "roadmap.html"
+        else:
+            parent = parent[16:] + "/roadmap.html"
+        content.append("        <a href=\"flintsgarage.neocities.com/" + parent + "/\"><p>Go back up a directory</p></a>\n")
+        content.append("        <br>\n")
     dirlist = os.listdir(directory)
     walk = 0
     directories = []
