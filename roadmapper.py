@@ -15,7 +15,7 @@ def initFile():
     return content
 
 def runFile(content, directory = os.path.dirname(__file__)):
-    content.append("    <h1>Index of flintsgarage.neocities.com" + directory[15:].replace("\\", "/") + "/</h1>\n")
+    content.append("    <h1>Index of flintsgarage.neocities.com" + directory[15:] + "/</h1>\n")
     content.append("    <hr>\n")
     dirlist = os.listdir(directory)
     walk = 0
@@ -32,6 +32,8 @@ def runFile(content, directory = os.path.dirname(__file__)):
         item = dirlist[walk]
         if os.path.isfile(directory + "\\" + item) and item != "roadmap.html":
             type = item[-4:]
+            if directory != os.path.dirname(__file__):
+                item = directory[16:] + "\\" + item
             print(item + " is a file")
             if type == ".png":
                 content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/png.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item + "</p></a>\n")
@@ -55,6 +57,10 @@ def runFile(content, directory = os.path.dirname(__file__)):
 
 def saveFile(content, directory = os.path.dirname(__file__)):
     savefile = open(directory + "/roadmap.html", "w")
+    walk = 0
+    while walk < len(content):
+        content[walk] = content[walk].replace("\\", "/")
+        walk = walk + 1
     savefile.writelines(content)
 
 def rootFolders(directories):
