@@ -23,6 +23,7 @@ body {
     margin: 50px;
     padding: 0px;
     image-rendering: pixelated;
+    text-underline-offset: 5px;
 }
 
 .textlink a:link {
