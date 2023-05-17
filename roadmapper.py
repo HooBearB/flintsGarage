@@ -16,6 +16,7 @@ def initFile():
 
 def runFile(content, directory = os.path.dirname(__file__)):
     content.append("    <h1>Index of flintsgarage.neocities.com" + directory[15:].replace("\\", "/") + "/</h1>\n")
+    content.append("    <hr>\n")
     dirlist = os.listdir(directory)
     walk = 0
     directories = []
