@@ -46,19 +46,19 @@ def runFile(content, directory = os.path.dirname(__file__)):
                 dirlen = len(directory[15:])
             print(item + " is a file")
             if type == ".png":
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/png.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/png.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type == "html":
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/html.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/html.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type in [".jpg", "jpeg"]:
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/jpeg.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/jpeg.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type == ".css":
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/css.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/css.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type == ".txt":
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/txt.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/txt.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type == ".pdf":
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/pdf.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/pdf.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
             if type in [".ttf", "woff", "off2"]:
-                content.append("        <a href=\"/" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/_blank.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
+                content.append("        <a href=\"" + item + "\"><p><img src=\"https://raw.githubusercontent.com/redbooth/free-file-icons/master/48px/_blank.png\" style=\"position:relative; bottom:-10px;\" height=\"24px\" width=\"24px\">" + item[dirlen:] + "</p></a>\n")
         walk = walk + 1
     content.append("        <p>All icons on this page are retrieved directly from <a href=\"https://github.com/redbooth/free-file-icons\">https://github.com/redbooth/free-file-icons</a> which is licensed under the MIT License.</p>\n")
     content.append("  	</body>\n")
